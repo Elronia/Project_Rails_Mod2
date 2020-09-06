@@ -1,8 +1,8 @@
 class Place < ApplicationRecord
     
-    has_many :signups
-    has_many :categories
-    has_many :favorites
+    has_many :signups, dependent: :destroy
+    has_many :categories, dependent: :destroy
+    has_many :favorites, dependent: :destroy
     has_many :users, through: :signups#, :favorites
     has_many :users, through: :favorites
 

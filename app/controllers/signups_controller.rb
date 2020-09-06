@@ -7,7 +7,7 @@ class SignupsController < ApplicationController
     end
     
     def create
-        # byebug
+        
         signup_params = params.require(:signup).permit(:priority_level, :user_id, :place_id, :date)
         @signup = Signup.create(favorite_params)
 

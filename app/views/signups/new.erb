@@ -5,9 +5,9 @@
     <%= f.label :date %>
     <%= f.datetime_field :date %>
     <%= f.label :user_id %>
-    <%= f.collection_select :user_id, @users, :id, :first_name, :last_name, :email_address %>
+    <%= f.collection_select :user_id, @users, :id, :first_name %>
     <%= f.label :place_id %>
-    <%= f.collection_select :place_id, @places, :id, :name, :location, :hours_of_operation, :date %>
+    <%= f.collection_select :place_id, @places, :id, :name %>
     <%= f.submit "Create Signup" %>
 
 <% end %>
