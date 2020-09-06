@@ -1,0 +1,11 @@
+<h1> <%= @place.name %> </h1>
+<h2> A list of places: </h2>
+
+<ul>
+    <% @place.categories.map do |place_element|%>
+    
+        <li> <%= link_to category_element.name, category_path(category) %> </li>
+        
+    <%end%>
+
+</ul>
