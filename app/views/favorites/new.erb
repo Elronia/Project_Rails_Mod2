@@ -1,0 +1,13 @@
+<h1> Favorite a place! </h1>
+
+<%= form_for @favorite do |f| %>
+    <%= f.label :priority_level %>
+    <%= f.number_field :priority_level %> <br>
+    <%= f.label :user_id, "User:" %>
+    <%= f.collection_select :user_id, @users,  :id, :first_name %> <br>
+    
+    <%= f.label :word_id, "Place: " %>
+    <%= f.collection_select :place_id, @places, :id, :name %> <br>
+
+    <%= f.submit "Favorite it!" %>
+<% end %>

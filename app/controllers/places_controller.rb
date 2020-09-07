@@ -1,8 +1,20 @@
 class PlacesController < ApplicationController
     
     def index
-        @places = Place.all
+        if logged_in?
+            @places = @current_user.places
+        else
+            @places = Place.all # or force a login
+        end
     end
+    # def index
+    #     if session[:user_id]
+    #         @user = User.find(session[:user_id])
+    #         @places = @user.places
+    #       else
+    #         @places = Place.all # or force a login
+    #       end
+    # end
     
     def new
         @place = Place.new

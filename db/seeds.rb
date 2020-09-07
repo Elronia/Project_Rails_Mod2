@@ -17,8 +17,8 @@ User.reset_pk_sequence
 Place.reset_pk_sequence
 Category.reset_pk_sequence
 
-user1 = User.create(first_name: "Nicholas", last_name: "Klein", email_address: "nicholas_klein@gmail.com")
-user2 = User.create(first_name: "Andrew", last_name: "Smith", email_address: "andrew_smith@gmail.com")
+user1 = User.create(first_name: "Nicholas", last_name: "Klein", email_address: "nicholas_klein@gmail.com", password: "abc123")
+user2 = User.create(first_name: "Andrew", last_name: "Smith", email_address: "andrew_smith@gmail.com", password: "abc123")
 
 place1 = Place.create(name: "Metropolitan Museum", location: "1000 5th Ave, New York, NY, 10028", hours_of_operation: "10am-5pm", date: "2020-09-20")
 place2 = Place.create(name: "Central Park", location: "W 59th St, New York, NY 10019", hours_of_operation: "10am-5pm", date: "2020-09-21")

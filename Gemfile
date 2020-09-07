@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 gem 'activerecord-reset-pk-sequence'
 gem 'email_validator'
+gem 'bootstrap-sass'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
