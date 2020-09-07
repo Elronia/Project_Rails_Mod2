@@ -2,7 +2,7 @@
 
 <%= form_for @favorite do |f| %>
     <%= f.label :priority_level %>
-    <%# <%= f.number_field :priority_level %> <br> %>
+    <%# <%= f.number_field :priority_level %> <br> 
     <%= f.hidden_field :user_id, value: @user.id %>
     
     <%= f.label :word_id, "Place: " %>
