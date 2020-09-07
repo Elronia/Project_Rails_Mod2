@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
 
+    before_action :redirect_to_home, only: [:new, :create]
     skip_before_action :auhorized_to_see_page, only: [:new,:create]
     
     def new
@@ -28,6 +29,11 @@ class SessionsController < ApplicationController
     def destroy
         session.delete(:user_id) # or session[:user_id] = nil
         @current_user = nil
+        redirect_to login_path
+    end
+
+    def redirect_to_home
+        redirect_to '/' if current_user
     end
 
 end
