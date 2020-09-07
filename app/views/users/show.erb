@@ -1,1 +1,12 @@
-<h1> Show page </h1>
+<h1> User Profile page </h1>
+
+<h3> Favorites </h3>
+  <% @user.favorites.each do |favorite| %>
+    <%= favorite.place.name %><br />
+  <% end %>
+
+<div class="btn-group">
+        <%= link_to "<button>Add Favorite</button>".html_safe, new_user_favorite_path(@user) %><br>
+
+
+    </div>

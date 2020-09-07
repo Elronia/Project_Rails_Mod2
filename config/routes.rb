@@ -16,6 +16,10 @@ Rails.application.routes.draw do
   get "signup", to: "users#new", as: "signup"
   post "/users", to: "users#create"
   get "/users/:id", to: "users#show", as: "user"
+
+  resources :users do
+    resources :favorites, only: [:new, :create]
+  end
   
 ################################## SIGNUPS ###############################
   get "/signups", to: "signups#index", as: "signups"
