@@ -1,0 +1,14 @@
+<h1>Category</h1>
+<%= form_for @category do |f| %>
+    <%= f.label :priority_level %>
+    <%# <%= f.number_field :priority_level %> <br> 
+
+<%= form_for @category do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+  <br>
+  <%= f.label :place_id %>
+  <%= f.collection_select :place_id, @places, :id, :name %>
+  <br>
+  <%= f.submit %>
+<% end %>

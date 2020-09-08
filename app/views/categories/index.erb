@@ -2,6 +2,8 @@
 
 <ul>
   <% @categories.each do |category_element| %>
-    <li><%= category_element.name %></li>
+    <li><%= link_to category_element.name, category_path(category_element.id) %></li>
   <% end %>
 </ul>
+
+  

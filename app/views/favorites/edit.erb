@@ -1,0 +1,9 @@
+<h1>Delete your favorite</h1>
+
+<%= form_for @favorite do |f| %>
+    <h3><%= f.label :places, "Place: " %></h3>
+    <%= f.collection_select :places, @places, :id, :name %> <br>
+    <br>
+    <%= f.submit "Delete this place!" %>
+<% end %>
+<br>

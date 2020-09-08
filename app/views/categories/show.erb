@@ -1,0 +1,11 @@
+<h1> <%= @category.name %> </h1>
+<h2> A list of categories: </h2>
+<%# byebug %>
+<ul>
+    <% @category.place.map do |category_element|%>
+    
+        <li> <%= link_to category_element.name, category_path(category) %> </li>
+        
+    <% end %>
+
+</ul>
